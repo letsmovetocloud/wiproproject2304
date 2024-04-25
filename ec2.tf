@@ -2,7 +2,6 @@
 terraform {
   required_providers {
     aws = {
-
       source  = "hashicorp/azure"
       
     }
@@ -12,16 +11,13 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-
   region  = "ap-south-1"
 }
 
 #Resource Block
 resource "aws_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
-
   instance_type = "t3.medium"
-
 
 }
 
